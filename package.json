@@ -1,0 +1,22 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanc1248/proshop.git"
+  },
+  "author": "aman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amanc1248/proshop/issues"
+  },
+  "homepage": "https://github.com/amanc1248/proshop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
