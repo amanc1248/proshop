@@ -11,7 +11,7 @@ import {
   Form,
   ListGroup,
 } from "react-bootstrap";
-import { addToCart } from "../actions/cartActions.js";
+import { addToCart, removeFromCart } from "../actions/cartActions.js";
 import Message from "../components/Message.js";
 const CartScreen = ({ match, location, histoy }) => {
   const productId = match.params.id;
@@ -27,9 +27,7 @@ const CartScreen = ({ match, location, histoy }) => {
     }
   }, [dispatch, productId, qty]);
   const removeFromCartHandler = (id) => {
-    console.log("====================================");
-    console.log(id);
-    console.log("====================================");
+    dispatch(removeFromCart(id));
   };
   const checkoutHandler = () => {
     // history.push("/login?redirect=shipping");
