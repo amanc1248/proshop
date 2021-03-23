@@ -16,7 +16,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 // match prop helps to find the params
 const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.productDetails);
