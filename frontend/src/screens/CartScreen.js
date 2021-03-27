@@ -13,7 +13,7 @@ import {
 } from "react-bootstrap";
 import { addToCart, removeFromCart } from "../actions/cartActions.js";
 import Message from "../components/Message.js";
-const CartScreen = ({ match, location, histoy }) => {
+const CartScreen = ({ match, location, history }) => {
   const productId = match.params.id;
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
 
@@ -30,7 +30,7 @@ const CartScreen = ({ match, location, histoy }) => {
     dispatch(removeFromCart(id));
   };
   const checkoutHandler = () => {
-    // history.push("/login?redirect=shipping");
+    history.push("/login?redirect=shipping");
   };
   return (
     <Row>
