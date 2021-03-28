@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Message from "../components/Message";
 import FormContainer from "../components/FormContainer";
-import Loader from "../components/Loader";
 import { saveShippingAddress } from "../actions/cartActions";
 import { useDispatch, useSelector } from "react-redux";
 import CheckoutSteps from "../components/CheckoutSteps";
