@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../actions/userActions";
 
-const LoginScreen = ({ location, history }) => {
+const RegisterScreen = ({ location, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -77,7 +77,7 @@ const LoginScreen = ({ location, history }) => {
           ></Form.Control>
         </Form.Group>
         <Button type="submit" variant="primary">
-          Sign In
+          Register
         </Button>
       </Form>
       <Row className="py-3">
@@ -92,4 +92,4 @@ const LoginScreen = ({ location, history }) => {
   );
 };
 
-export default LoginScreen;
+export default RegisterScreen;
