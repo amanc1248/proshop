@@ -1,5 +1,5 @@
 import express from "express";
-import { protect } from "../middleWare/authMiddleWare.js";
+import { isAdmin, protect } from "../middleWare/authMiddleWare.js";
 const router = express.Router();
 
 import {
@@ -8,8 +8,8 @@ import {
   registerUser,
   updateUserProfile,
 } from "../controllers/userController.js";
-
-router.route("/").post(registerUser);
+import { getUsers } from "../controllers/userController.js";
+router.route("/").post(registerUser).get(protect, isAdmin, getUsers);
 router.post("/login", authUser);
 router
   .route("/profile")
