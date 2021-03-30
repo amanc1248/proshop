@@ -124,7 +124,7 @@ const ProfileScreen = ({ history }) => {
                   <td>{order.totalPrice}</td>
                   <td>
                     {order.isPaid ? (
-                      order.paidAt
+                      order.paidAt.substring(0, 10)
                     ) : (
                       <i className="fas fa-times" style={{ color: "red" }}></i>
                     )}
