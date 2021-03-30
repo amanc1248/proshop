@@ -7,6 +7,7 @@ import {
   getUserProfile,
   registerUser,
   updateUserProfile,
+  deleteUser,
 } from "../controllers/userController.js";
 import { getUsers } from "../controllers/userController.js";
 router.route("/").post(registerUser).get(protect, isAdmin, getUsers);
@@ -15,4 +16,5 @@ router
   .route("/profile")
   .get(protect, getUserProfile)
   .put(protect, updateUserProfile);
+router.route("/:id").delete(protect, isAdmin, deleteUser);
 export default router;
