@@ -1,5 +1,5 @@
 import express from "express";
-import { protect } from "../middleWare/authMiddleWare.js";
+import { isAdmin, protect } from "../middleWare/authMiddleWare.js";
 const router = express.Router();
 
 import {
@@ -7,9 +7,10 @@ import {
   getOrderById,
   updateOrderToPaid,
   getMyOrders,
+  getOrders,
 } from "../controllers/orderController.js";
 
-router.route("/").post(protect, addOrderItems);
+router.route("/").post(protect, addOrderItems).get(protect, isAdmin, getOrders);
 router.route("/myorders").get(protect, getMyOrders);
 router.route("/:id").get(protect, getOrderById);
 router.route("/:id/pay").put(protect, updateOrderToPaid);
